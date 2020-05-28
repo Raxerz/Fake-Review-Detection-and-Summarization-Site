@@ -2,7 +2,7 @@ function init() {
     R = getURLParameter('id');
     if (localStorage.getItem('reviewerInfo' + R) != null || localStorage.getItem('reviewerInfo' + R) != undefined) {
 
-        data = JSON.parse(localStorage.getItem('reviewerInfo' + R));
+        data = JSON.parse(JSON.stringify(localStorage.getItem('reviewerInfo' + R)));
         p = "<div  class='page-header' style='text-align:left!important'>\
         <h4>Reviewer ID:" + data.reviewerID + "</h4>\
         <h4>Reviewer Name:" + data.reviewerName + "</h4>";
