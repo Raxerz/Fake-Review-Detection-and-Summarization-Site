@@ -286,7 +286,8 @@ if it's not present, don't show loader */
 	width:60px;
 }
 .page-header {
-	margin-top: 70px;
+	margin-top: 30px;
+  margin-bottom: 20px;
 }
 
 .itemOptions {
