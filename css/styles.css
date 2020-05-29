@@ -105,15 +105,7 @@ body {
 }
 a {
     text-decoration: none !important;
-    color:black!important;
-    color: inherit;
 }
-a:hover{
-  color:black!important;
-  text-decoration: none !important;
-}
-
-
 
 /* This only works with JavaScript,
 if it's not present, don't show loader */
