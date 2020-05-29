@@ -6,7 +6,8 @@ function init(){
       var domain=localStorage.getItem('nameReviewer');
       var brand = localStorage.getItem('prodid');
       var review = document.getElementById("review");
-      var URL="http://localhost:8000/custom";
+      //var URL="http://localhost:8000/custom";
+      var URL="https://product-review-analysis-server.herokuapp.com/custom"
       var formData = {prodid:brand,review:review.value,domain:domain};
       $('#modal-content').text("Processing the review...Please wait");
       $.ajax({
@@ -17,9 +18,8 @@ function init(){
         console.log(data);
 	//alert("This review is " + data.fakeness + " fake");
         $('#modal-content').text("This review is " + data.fakeness + "% fake");
-  
+
 }
        });
 }
 }
-

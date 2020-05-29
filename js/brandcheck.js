@@ -5,7 +5,8 @@ function init(){
   if(localStorage.getItem('nameReviewer')!=undefined || localStorage.getItem('nameReviewer')!=null)
   {
       var s=localStorage.getItem('nameReviewer');
-      var URL="http://localhost:8000/brandreco?domain="+s+"&prodid="+PRODID;
+      //var URL="http://localhost:8000/brandreco?domain="+s+"&prodid="+PRODID;
+      var URL="https://product-review-analysis-server.herokuapp.com/brandreco?domain="+s+"&prodid="+PRODID;
       $.ajax({
       url: URL
        })
@@ -13,7 +14,7 @@ function init(){
 	if((data.fakecnt/data.totcnt)<0.5){
   	 $('#productreco').text("This product has very few or no fake reviews and is hence genuine");
 	} else {
-  	 $('#productreco').text("This product is NOT recommended");	
+  	 $('#productreco').text("This product is NOT recommended");
 	}
 });
 }

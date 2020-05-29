@@ -22,7 +22,8 @@ function fake(category)
 			}
 			var pause=0;
 				$.ajax({
-				url: 'http://localhost:8000/getbrands?domain='+category
+				//url: 'http://localhost:8000/getbrands?domain='+category
+				url: 'https://product-review-analysis-server.herokuapp.com/getbrands?domain='+category
 				 })
 				.done(function(data) {
 				console.log(data);

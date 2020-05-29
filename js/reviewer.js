@@ -2,7 +2,8 @@ function init(){
 	//localStorage.setItem('index',BRAND);
   data={};
   domain=localStorage.getItem('nameReviewer');
-	var URL="http://localhost:8000/reviewerbased?domain="+domain;
+	//var URL="http://localhost:8000/reviewerbased?domain="+domain;
+  var URL = "https://product-review-analysis-server.herokuapp.com/reviewerbased?domain="+domain;
 	//$('.main-1').text("Processing....Please wait");
 	$.ajax({
 	url: URL

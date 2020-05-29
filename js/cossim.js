@@ -4,14 +4,15 @@ function init(){
   if(localStorage.getItem('nameReviewer')!=undefined || localStorage.getItem('nameReviewer')!=null)
   {
       var s=localStorage.getItem('nameReviewer');
-      var URL="http://localhost:8000/cossim?domain="+s;
+      //var URL="http://localhost:8000/cossim?domain="+s;
+      var URL="https://product-review-analysis-server.herokuapp.com/cossim?domain="+s;
 	$('.main').text("Processing the request.... Please wait");
       $.ajax({
       url: URL
        })
       .done(function(data) {
         console.log(data);
-	$('.main').empty();	
+	$('.main').empty();
         for(i=0;i<1000;i++)
         {
 	 if(data.reviewerID[i]!=undefined){

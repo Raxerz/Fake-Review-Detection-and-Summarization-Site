@@ -4,7 +4,8 @@ function init(){
   if(localStorage.getItem(localStorage.getItem('id')+'tfidf')==undefined || localStorage.getItem(localStorage.getItem('id')+'tfidf')==null)
   {
       var s=localStorage.getItem('name')+'&prodid='+localStorage.getItem('id')+'&summary_ch='+localStorage.getItem('summary')+'&token=y';
-      var URL="http://localhost:8000/summary?domain="+s;
+      //var URL="http://localhost:8000/summary?domain="+s;
+      var URL = "https://product-review-analysis-server.herokuapp.com/summary?domain="+s;
 	$('.main-1').text("Processing....Please wait");
       $.ajax({
       url: URL
