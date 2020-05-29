@@ -5,18 +5,22 @@
   <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.js"></script>
+
   <link href="../css/responsive.css" rel="stylesheet">
   <link href="../css/search.css" rel="stylesheet">
   <link href="../css/style1.css" rel="stylesheet">
+  <script src="../js/model.js"></script>
+  <script src="../js/product-recommendation-brands.js"></script>
   <script src="../js/jquery-events.js"></script>
   <link href="../css/sidebar.css" rel="stylesheet"/>
   <link href="../css/newStyle.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="../css/style.css">
     <title>Fake review detection and Summarization</title>
   </head>
   <script>
   </script>
-  <body onload="init()" style="background:url('../images/bg1.png'); background-size: auto">
+  <body onload="init()">
     <div class="navbar navbar-static navbar-default navbar-fixed-top">
   		<div class="container-fluid">
   			<div class="navbar-header">
@@ -81,40 +85,20 @@
       </ul>
     </div>
     <div class="main col-sm-12 col-xs-12 col-md-12 " id="globalCntr">
-      <div class="" style="text-align:center;padding-bottom:300px;color:white">
-              <h2>Choose Option</h2>
-      </div>
-      <div class="SummarySelections">
-        <div class="col-md-offset-3 col-md-5 col-xs-12" >
-          <div class="textRank categoryColor">
-            <a href="views/product-summarization.html">
-              <div class="itemsText">
-                Product Summary  <img class="itemsImage"src="../images/rightArrow.png"/>
-              </div>
-            </a>
+      <div class="page-header">
+              <h2>Select Your Domain</h2>
+              <div class="itemOptions">
+                <div class="col-sm-7 col-md-8 col-xs-12">
+                  <div class="col-md-2 noSidePadding automotives">
+                    <span class="btn options auto selected">Automotives</span>
+                  </div>
+                </div>
+                </div>
+                <div class="col-sm-5 col-md-4 col-xs-12 sorting-options">
+                  <div class="col-sm-2 col-md-3 visible-sm visible-md visible-lg"></div>
+                </div>
           </div>
-        </div>
-        <br>
-        <div class="col-md-offset-3 col-md-5 col-xs-12">
-          <div class="rfid categoryColor">
-            <a href="views/fake-review-classification.html">
-              <div class="itemsText">
-                Fake Review Classification   <img class="itemsImage"src="../images/rightArrow.png"/>
-              </div>
-            </a>
-          </div>
-        </div>
-	 <div class="col-md-offset-3 col-md-5 col-xs-12">
-          <div class="rfid categoryColor">
-            <a href="views/product-recommendation.html">
-              <div class="itemsText">
-                Product recommendation   <img class="itemsImage"src="../images/rightArrow.png"/>
-              </div>
-            </a>
-          </div>
-        </div>
-      </div>
-
+            <div class="display-area"></div>
     </div>
     <div id="categories">
         <div class="">
@@ -126,3 +110,6 @@
 
   </body>
 </html>
+<!-- ng -click for on click,for images ng-src="1-{{state}}.png" if we dont put
+ng-src on first parse by htmlit will give error and then angular putsstring.
+ ng-bind-html="divHtmlVar" use divHtmlVar to add or remove text-->

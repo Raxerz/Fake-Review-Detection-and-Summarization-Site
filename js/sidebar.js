@@ -7,7 +7,7 @@
     if (this.options.parent) this.$parent = $(this.options.parent)
     if (this.options.toggle) this.toggle()
   }
-
+  
   Sidebar.DEFAULTS = {
     toggle: true
   }
@@ -21,7 +21,7 @@
     if (startEvent.isDefaultPrevented()) return
 
     this.$element
-      .addClass('sidebar-open')
+    .addClass('sidebar-open')
 
     this.transitioning = 1
 
@@ -34,8 +34,8 @@
     if(!$.support.transition) return complete.call(this)
 
     this.$element
-      .one($.support.transition.end, $.proxy(complete, this))
-      .emulateTransitionEnd(400)
+    .one($.support.transition.end, $.proxy(complete, this))
+    .emulateTransitionEnd(400)
   }
 
   Sidebar.prototype.hide = function () {
@@ -46,21 +46,21 @@
     if(startEvent.isDefaultPrevented()) return
 
     this.$element
-      .removeClass('sidebar-open')
+    .removeClass('sidebar-open')
 
     this.transitioning = 1
 
     var complete = function () {
       this.transitioning = 0
       this.$element
-        .trigger('hidden.bs.sidebar')
+      .trigger('hidden.bs.sidebar')
     }
 
     if (!$.support.transition) return complete.call(this)
 
     this.$element
-      .one($.support.transition.end, $.proxy(complete, this))
-      .emulateTransitionEnd(400)
+    .one($.support.transition.end, $.proxy(complete, this))
+    .emulateTransitionEnd(400)
   }
 
   Sidebar.prototype.toggle = function () {
@@ -91,8 +91,8 @@
   $(document).on('click.bs.sidebar.data-api', '[data-toggle="sidebar"]', function (e) {
     var $this = $(this), href
     var target = $this.attr('data-target')
-        || e.preventDefault()
-        || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')
+    || e.preventDefault()
+    || (href = $this.attr('href')) && href.replace(/.*(?=#[^\s]+$)/, '')
     var $target = $(target)
     var data = $target.data('bs.sidebar')
     var option = data ? 'toggle' : $this.data()
@@ -110,7 +110,7 @@
       $target.each(function(i, trgt) {
         var $trgt = $(trgt);
         if($trgt.data('bs.sidebar') && $trgt.hasClass('sidebar-open')) {
-            $trgt.sidebar('hide');
+          $trgt.sidebar('hide');
         }
       })
     }

@@ -9,6 +9,8 @@
   <link href="../css/responsive.css" rel="stylesheet">
   <link href="../css/search.css" rel="stylesheet">
   <link href="../css/style1.css" rel="stylesheet">
+    <script src="../js/model.js"></script>
+  <script src="../js/option.js"/>
   <script src="../js/jquery-events.js"></script>
   <link href="../css/sidebar.css" rel="stylesheet"/>
   <link href="../css/newStyle.css" rel="stylesheet"/>
@@ -16,7 +18,7 @@
   </head>
   <script>
   </script>
-  <body onload="init()" style="background:url('../images/bg1.png'); background-size: auto">
+  <body onload="init() ">
     <div class="navbar navbar-static navbar-default navbar-fixed-top">
   		<div class="container-fluid">
   			<div class="navbar-header">
@@ -81,38 +83,30 @@
       </ul>
     </div>
     <div class="main col-sm-12 col-xs-12 col-md-12 " id="globalCntr">
-      <div class="" style="text-align:center;padding-bottom:300px;color:white">
-              <h2>Choose Option</h2>
+      <div class="page-header domain">
+              <h2>Choose Method Of Summary Generation</h2>
       </div>
+      <a href="text-rank-based-summarization.html">
       <div class="SummarySelections">
-        <div class="col-md-offset-3 col-md-5 col-xs-12" >
+        <div class="col-md-offset-3 col-md-5 col-xs-12">
           <div class="textRank categoryColor">
-            <a href="views/product-summarization.html">
               <div class="itemsText">
-                Product Summary  <img class="itemsImage"src="../images/rightArrow.png"/>
+                Text Rank  <img class="itemsImage"src="../images/rightArrow.png"/>
               </div>
-            </a>
+
           </div>
         </div>
+	</a>
         <br>
+	<a href="./tfidf-based-summarization.html">
         <div class="col-md-offset-3 col-md-5 col-xs-12">
           <div class="rfid categoryColor">
-            <a href="views/fake-review-classification.html">
               <div class="itemsText">
-                Fake Review Classification   <img class="itemsImage"src="../images/rightArrow.png"/>
+                TFIDF  <img class="itemsImage"src="../images/rightArrow.png"/>
               </div>
-            </a>
           </div>
         </div>
-	 <div class="col-md-offset-3 col-md-5 col-xs-12">
-          <div class="rfid categoryColor">
-            <a href="views/product-recommendation.html">
-              <div class="itemsText">
-                Product recommendation   <img class="itemsImage"src="../images/rightArrow.png"/>
-              </div>
-            </a>
-          </div>
-        </div>
+	</a>
       </div>
 
     </div>

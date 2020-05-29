@@ -9,6 +9,8 @@
   <link href="../css/responsive.css" rel="stylesheet">
   <link href="../css/search.css" rel="stylesheet">
   <link href="../css/style1.css" rel="stylesheet">
+  <script src="../js/model.js"/>
+  <script src="../js/fake-review-detection-category.js"/>
   <script src="../js/jquery-events.js"></script>
   <link href="../css/sidebar.css" rel="stylesheet"/>
   <link href="../css/newStyle.css" rel="stylesheet"/>
@@ -16,7 +18,7 @@
   </head>
   <script>
   </script>
-  <body onload="init()" style="background:url('../images/bg1.png'); background-size: auto">
+  <body onload="init()" style="background:url('../images/bg3'); background-repeat: no-repeat; ">
     <div class="navbar navbar-static navbar-default navbar-fixed-top">
   		<div class="container-fluid">
   			<div class="navbar-header">
@@ -81,37 +83,47 @@
       </ul>
     </div>
     <div class="main col-sm-12 col-xs-12 col-md-12 " id="globalCntr">
-      <div class="" style="text-align:center;padding-bottom:300px;color:white">
-              <h2>Choose Option</h2>
+      <div class="page-header domain">
+              <h2>Choose Method Of Fake Review Detection</h2>
       </div>
       <div class="SummarySelections">
-        <div class="col-md-offset-3 col-md-5 col-xs-12" >
-          <div class="textRank categoryColor">
-            <a href="views/product-summarization.html">
+        <div class="col-md-offset-3 col-md-5 col-xs-12"  data-toggle="modal" data-target="#rankTextModal">
+          <a href="./reviewers-based-list.html">
+		  <div class="reviewer categoryColor">
               <div class="itemsText">
-                Product Summary  <img class="itemsImage"src="../images/rightArrow.png"/>
+                Reviewer Based  <img class="itemsImage"src="../images/rightArrow.png"/>
               </div>
-            </a>
+
           </div>
+		  </a>
         </div>
         <br>
-        <div class="col-md-offset-3 col-md-5 col-xs-12">
-          <div class="rfid categoryColor">
-            <a href="views/fake-review-classification.html">
+        <div class="col-md-offset-3 col-md-5 col-xs-12" data-toggle="modal" data-target="#rfidModal">
+	  <a href="./reviews-based-list.html">
+          <div class="review categoryColor">
               <div class="itemsText">
-                Fake Review Classification   <img class="itemsImage"src="../images/rightArrow.png"/>
+                Review Based <img class="itemsImage"src="../images/rightArrow.png"/>
               </div>
-            </a>
           </div>
+	  </a>
         </div>
-	 <div class="col-md-offset-3 col-md-5 col-xs-12">
-          <div class="rfid categoryColor">
-            <a href="views/product-recommendation.html">
+		  <div class="col-md-offset-3 col-md-5 col-xs-12" data-toggle="modal" data-target="#rfidModal">
+          <a href="./cosine-similarity-based-fake-review-detection.html">
+		  <div class="cosine categoryColor">
               <div class="itemsText">
-                Product recommendation   <img class="itemsImage"src="../images/rightArrow.png"/>
+                Cosine Similarity <img class="itemsImage"src="../images/rightArrow.png"/>
               </div>
-            </a>
           </div>
+		 </a>
+        </div>
+		  <div class="col-md-offset-3 col-md-5 col-xs-12" data-toggle="modal" data-target="#rfidModal">
+          <a href="./custom-review-spam-detection.html">
+		  <div class="cosine categoryColor" style="height:150px;">
+              <div class="itemsText">
+                Custom review spam detection <img class="itemsImage"src="../images/rightArrow.png"/>
+              </div>
+          </div>
+		 </a>
         </div>
       </div>
 
