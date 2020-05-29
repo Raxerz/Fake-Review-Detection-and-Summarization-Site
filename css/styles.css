@@ -106,6 +106,7 @@ body {
 a {
     text-decoration: none !important;
     color:black!important;
+    color: inherit;
 }
 a:hover{
   color:black!important;
@@ -148,10 +149,6 @@ if it's not present, don't show loader */
 
 .btn-file:hover, .sorting-option-selected:hover {
 	color: white!important;
-}
-
-a {
-	color: inherit;
 }
 
 .filediv {
