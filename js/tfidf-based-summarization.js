@@ -40,10 +40,11 @@ function registerEvents(){
     $('.main-1').empty();
     var tok=(data.freq);
     console.log(tok);
-    for(var i=0;i<tok.length;i++){
-      $('.main-1').append(tok[i]);
-      $('.main-1').append('<hr/><br/>')
-    }
+    _.forEach(tok, function(value, key) {
+      console.log(value + " " + key);
+      $('.main-1').append(key+':'+value);
+      $('.main-1').append('<hr/><br/>');
+    });
   });
   $(document).on('click', '.tabCategory-3', function() {
     $('.main-1').empty();
