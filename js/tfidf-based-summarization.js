@@ -41,7 +41,6 @@ function registerEvents(){
     var tok=(data.freq);
     console.log(tok);
     _.forEach(tok, function(value, key) {
-      console.log(value + " " + key);
       $('.main-1').append(key+':'+value);
       $('.main-1').append('<hr/><br/>');
     });
@@ -50,11 +49,11 @@ function registerEvents(){
     $('.main-1').empty();
     var tok=(data.tf);
     console.log(tok);
-    _.forEach(tok, function(value, key) {
+    for(var key in tok){
+      var value = tok[key];
       $('.main-1').append(key+':'+value);
       $('.main-1').append('<hr/><br/>');
-    });
-
+    }
   });
   $(document).on('click', '.tabCategory-4', function() {
     $('.main-1').empty();
