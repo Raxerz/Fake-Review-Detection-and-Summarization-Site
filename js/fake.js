@@ -138,6 +138,7 @@ function init(category="Automotive")
 	if(registered==0)
 	registerEvents();
 	registered++;
+	localStorage.clear()
 }
 function registerEvents()
 {
