@@ -113,7 +113,6 @@ function init(category="Automotive"){
 	registerEvents();
 	registered++;
 	localStorage.clear()
-	localStorage.setItem()
 }
 function registerEvents(){
 	$(document).on('click', '.automotives', function() {
