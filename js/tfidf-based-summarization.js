@@ -40,20 +40,21 @@ function registerEvents(){
     $('.main-1').empty();
     var tok=(data.freq);
     console.log(tok);
-    _.forEach(tok, function(value, key) {
-      $('.main-1').append(key+':'+value);
-      $('.main-1').append('<hr/><br/>');
-    });
-  });
-  $(document).on('click', '.tabCategory-3', function() {
-    $('.main-1').empty();
-    var tok=(data.tf);
-    console.log(tok);
     for(var key in tok){
       var value = tok[key];
       $('.main-1').append(key+':'+value);
       $('.main-1').append('<hr/><br/>');
     }
+  });
+  $(document).on('click', '.tabCategory-3', function() {
+    $('.main-1').empty();
+    var tok=(data.tf);
+    console.log(tok);
+    _.forEach(tok, function(value, key) {
+      $('.main-1').append(key+':'+value);
+      $('.main-1').append('<hr/><br/>');
+    });
+
   });
   $(document).on('click', '.tabCategory-4', function() {
     $('.main-1').empty();
